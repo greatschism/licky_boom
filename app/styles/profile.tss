@@ -1,0 +1,197 @@
+
+"Window" : {
+	backgroundColor: Alloy.Globals.COLORS.lightGray,
+ 	extendEdges : [], //tss에서 작동하지 않아서 js에서 처리
+ 	backgroundColor : 'white'
+}
+
+"#loginBtn" : {
+	width : '80%'
+}
+".afterLogin" : {
+	title : L('logout'),
+	backgroundColor : '#c0392b',
+	color : 'white',
+	selectedColor : 'gray'
+}
+
+".beforeLogin" : {
+	title : L('login'),
+	backgroundColor : '#2ecc71',
+	color : 'white',
+	selectedColor : 'gray'
+}
+
+
+
+"#mainContent": {
+	disableBounce: false,
+	verticalBounce: true
+	// contentHeight: 672.5	// profileBanner + controlBar + photoList's height
+}
+"#profileBannerImage": {
+	// defaultImage: "images/defaultProfileBannerPicture.png",
+	// image: "images/defaultProfileBannerPicture.png",
+	backgroundColor: Alloy.Globals.COLORS.darkGray,
+	contentMode: 'aspectfill',
+	height: 212.5,
+	width: 320, //'100%',
+	left: 0,
+	top: 0,
+	preventDefaultImage : true
+}
+"#profileBannerImage[if=Alloy.Globals.is.iPhone6Plus]":{
+	width: 414,
+	height: 275
+}
+"#profileBannerImage[if=Alloy.Globals.is.iPhone6]":{
+	width: 375,
+	height: 249
+}
+"#profileImage": {
+	preventDefaultImage : false,
+	defaultImage: "images/defaultProfilePicture.png",
+	image: "images/defaultProfilePicture.png",
+	height: 70,
+	width: 70,
+	top: 0,
+	zIndex: 10,
+	borderColor: "#eee",
+	borderWidth: 1,
+	borderRadius: 35
+}
+"#wireForBtnImg": {
+	width: 72,
+	height: 32,
+	top: 36,
+	// left: 158,
+	left: '50%',
+	// borderColor: "red",
+	// borderWidth: 1,
+	image: "images/wireForButton.png",
+	visible:false
+}
+"#profileSettingBtn": {
+	height: 50,
+	width: 50,
+	top: 48,
+	left: 214,
+	zIndex: 10,
+	backgroundImage: "images/profileSettingButton.png",
+	visible : false
+	// borderColor: "#fff",
+	// borderWidht: 1,
+	// borderRadius: 14
+}
+"#profileSettingBtn[if=Alloy.Globals.is.iPhone6Plus]":{
+	left: '62%'
+}
+"#profileSettingBtn[if=Alloy.Globals.is.iPhone6]":{
+	left: '62%'
+}
+"#name": {
+	// borderWidth:1,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	top: 75 ,
+	color: "#fff",
+	font : {
+		fontSize : 18,
+		fontFamily : 'AppleSDGothicNeo-Light'
+	},
+}
+"#name[platform=ios]": {
+	shadowColor: '#aaa',
+	shadowOffset: {x:0.5, y:0.5}
+}
+"#controlBar": {
+	visible: false,
+	backgroundColor: "#50FF0000",
+	top: 182.5,
+	height: 30
+}
+"#menuTable": {
+	/*top: 207.5,	// 프로필 배너 확대될때 떨림을 조금 가리기 위해 5픽셀 위로. */
+	/*height: 88,*/
+	/*scrollable: false,*/
+	separatorInsets : {
+		left: 0,
+		right: 0
+	},
+}
+
+"#profileViewOptionDialog": {
+	cancel: 2
+}
+
+".foodRow": {
+	hasChild: true,
+	selectionStyle : Titanium.UI.iPhone.TableViewCellSelectionStyle.GRAY,
+	height : 44
+}
+
+".spoon" : {
+	text : '\uf27a \uf297 '	
+}
+
+".star" : {
+	text : '\uf1e0 '
+}
+
+".rowIcon" : {
+	left : 13,
+	width : 18,
+	// textAlign : 'center',
+	font : {
+		fontFamily : 'ionicons',
+		fontSize : 20
+	},
+	color : Alloy.Globals.COLORS.darkGray,
+	highlightedColor: 'white'
+}
+".rowLabel" :{
+	left: 38,
+	font: {
+		fontSize : 18
+	},
+	color: Alloy.Globals.COLORS.darkGray,
+	highlightedColor : 'white'
+}
+
+".rowCount" : {
+	right : 5,
+	textAlign : 'right',
+	font : {
+		fontSize : 15
+	},
+	color : Alloy.Globals.COLORS.gray
+}
+
+"#settingDialog" : {
+	title : L('setting'),
+	cancel : 1,
+	options : [L('logout'),L('cancel')]
+}
+"#cameraBtn" : {
+	visible : false
+}
+
+"#contactUsBtn" : {
+	title : L('bugReport'),
+	borderRadius: 5,
+	borderWidth : 0.5,
+	borderColor : Alloy.Globals.COLORS.defaultGray,
+	height: 44,
+	width: 232,
+	color: Alloy.Globals.COLORS.midGray,
+	bottom : 10,
+	font : {
+		fontSize : 17,
+		fontFamily : 'AppleSDGothicNeo-Light'
+	},
+	backgroundColor: Alloy.Globals.COLORS.whiteGray,
+	visible : false
+}
+
+"TableViewRow":{
+	selectedBackgroundColor : Alloy.Globals.COLORS.lickyRed
+}

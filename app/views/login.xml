@@ -1,0 +1,19 @@
+<Alloy>
+	<NavigationWindow platform="ios">
+		<Window class="container">
+			
+			
+			<View id="loginView">
+				<ImageView id="logo" />
+				<Label id="loginGuidance" />
+				<View class="fbButtonWrap">
+					<Button id="facebookImage" />
+					<Button id="fbLogin" />
+				</View>
+				
+				<Widget src="nl.fokkezb.html2as.widget" id="termsLabel"></Widget>
+			</View>	
+			<Button id="closeBtn" />	
+		</Window>
+	</NavigationWindow>
+</Alloy>

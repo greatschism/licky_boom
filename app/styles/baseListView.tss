@@ -1,0 +1,41 @@
+"ListView[platform=ios]":{
+	separatorColor: Alloy.Globals.COLORS.red,
+	separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
+}
+
+"#listView" : {
+	// separatorColor: 'green',
+	//defaultItemTemplate : 'selectedItemTemplate'
+	defaultItemTemplate : 'postItemTemplate',
+	showVerticalScrollIndicator : false,
+	separatorInsets : {
+		left: 0,
+		right : 0
+	},
+	// backgroundColor: Alloy.Globals.COLORS.lightGray
+	backgroundColor: Alloy.Globals.COLORS.darkGray
+}
+
+"#loadingActivity" : {
+	// left: 119,
+	style : Titanium.UI.iPhone.ActivityIndicatorStyle.PLAIN,
+	message : L('loading'),
+	color: Alloy.Globals.COLORS.midGray,
+	font : {
+		fontSize : 15,
+		fontFamily : 'AppleSDGothicNeo-UltraLight'
+	}
+}
+
+"#loadingFooterView" : {
+	// backgroundColor: Alloy.Globals.COLORS.lightGray,
+	backgroundColor: "transparent",
+	height : 30
+}
+// "#loadingLabel" : {
+	// // left: 147,
+	// text : ,
+	// color: Alloy.Globals.COLORS.darkGray,
+// 	
+// }
+

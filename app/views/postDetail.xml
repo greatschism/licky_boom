@@ -1,0 +1,58 @@
+<Alloy>
+	<Window class="container">
+		<RightNavButton platform="ios">
+			<View id="navButtonWrap">
+				<Button id="shareButton"/>
+				<Button id="moreButton" />
+			</View>
+		</RightNavButton>
+		
+		<View id="mainWrap">
+			<ListView id="listView">
+				<Templates>
+					<Require id="photoTemplate" src="postItemTemplate"/>
+					<ItemTemplate class="commentTemplate" name="commentTemplate">
+						<Label class="time" bindId="time"></Label>
+						<Label class="userName" bindId="userName"></Label>
+						<MaskedImage class="profileImage" bindId="profileImage"></MaskedImage>
+						<View class="speechBubble">
+							<Label class="commentContent" bindId="content"></Label>
+						</View>
+						<ImageView onLoad="hiddenProfileOnLoad" visible="false" class="hiddenProfile" bindId="hiddenProfile"></ImageView>
+						<ImageView class="profileRing" />
+					</ItemTemplate>
+				</Templates>
+				<!-- <PullView> .js로 옮김  
+					<View backgoundColor="yellow" height="100" width="320"></View>
+				</PullView> -->
+				<ListSection id="contentSection">
+				</ListSection>
+				<ListSection id="mapSection">
+					<HeaderView>
+						<View id="mapWrap" >
+							<View id="overMapView"></View>
+							<Label class="mapIcon"></Label>
+							<View class="mapBorder"></View>
+						</View>
+						<!-- <View width="306" height="1" top="119" backgroundColor="red" /> -->
+					</HeaderView>
+				</ListSection>
+				<ListSection id="commentSection">
+					<HeaderView>
+						<View height="15" backgroundColor="white" />
+					</HeaderView>
+					
+				</ListSection>
+			</ListView>
+			
+			
+			<View class="commentFormWrap">
+				<View class="leadingEdge" />
+				<TextArea id="commentField"></TextArea>
+				<Button id="sendBtn"></Button>
+			</View>
+		</View>
+
+		<OptionDialog id="moreOptionDialog"></OptionDialog>
+	</Window>
+</Alloy>
